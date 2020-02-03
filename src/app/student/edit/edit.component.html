@@ -1,0 +1,75 @@
+<div class="container"><br /><br />
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <a href="user.html">
+                <h2>Contoso University</h2>
+            </a>
+        </div>
+        <div class="col-3"></div>
+    </div><br /><br />
+    <form [formGroup]="signupFormGroup">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="firstName">First Name<span
+                                    class="required ml-1 text-danger font-weight-bold">*</span></label>
+                            <input type="text"  class="form-control" id="firstName" formControlName="firstName" value="{{tempFname}}">
+                            <div class="invalid-feedback" *ngIf="signupFormGroup.controls.firstName.invalid && signupFormGroup.controls.firstName.touched ">This field is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="lastName">Last Name<span
+                                    class="required ml-1 text-danger font-weight-bold">*</span></label>
+                            <input type="text"  class="form-control " id="lastName" formControlName="lastName" value="{{tempLname}}">
+                            <div class="invalid-feedback">This field is required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="email">Email Address<span
+                                    class="required ml-1 text-danger font-weight-bold">*</span></label>
+                            <input type="text"  class="form-control" id="email" formControlName="email" value="{{tempEmail}}">
+                            <div class="invalid-feedback">This field is required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="pwd">Password<span
+                                    class="required ml-1 text-danger font-weight-bold">*</span></label>
+                            <input type="password"  class="form-control" id="pwd" formControlName="pwd" value="{{tempPwd}}">
+                            <div class="invalid-feedback">This field is required</div>
+                        </div>
+                    </div>
+                </div>
+            </div><br/>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <button class="btn btn-primary" style="width: 100%;" (click)="onUpdate()">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    </form>
+
+</div>
